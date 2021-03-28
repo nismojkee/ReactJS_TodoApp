@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  color: white;
+}
+header > h1 {
+  text-transform: uppercase;
+}
+
+form {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.todo-input {
+  height: 2em;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: none;
+  color: darkslategray;
+  padding: 0 .5em;
+}
+.todo-input::placeholder {
+  color: white;
+}
+.todo-input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.5);
+  color: black;
+}
+.todo-button {
+  height: 1.5em;
+  width: 1.5em;
+  background: rgba(151, 142, 147, 0.3);
+  border: 1px solid rgba(255,0,125,0.1);
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.todo-filter {
+  height: 2.1em;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  color: white;
+}
+.todo-filter:focus {
+  outline: none;
+}
+.todo-filter > option {
+  background: rgba(0,0,0,0.1);
+  color: gray;
+}
+.todo-filter > option[selected] {
+  color: black;
+}
+
+.todo-container > ul {
+  list-style: none;
+}
+.todo {
+  display: flex;
+  flex-direction: row;;
+  background: rgba(255,255,255,0.2);
+  margin: .1em 0;
+  transition: .2s ease-in-out;
+}
+.todo-item {
+  flex: 1;
+  height: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2em;
+  padding: 0 .5em;
+  color: white;
+}
+.todo-item.completed {
+  height: 2em;
+  transition: .2s ease-in-out;
+  background: rgba(0,0,0,0.1);
+  color: gray;
+  text-decoration: line-through;
+}
+.todo-complete {
+  border: none;
+  background: #28a745;
+  color: white;
+  padding: .5rem;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.todo-complete:focus {
+  outline: none;
+}
+.todo-delete {
+  border: none;
+  background: #df5765;
+  color: white;
+  padding: .5rem;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.todo-delete:focus {
+  outline: none;;
+}
